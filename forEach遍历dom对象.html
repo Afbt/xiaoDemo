@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    /* body::after {
+      border: 1px solid transparent;
+      display: block;
+      content: '.';
+      clear: both;
+      line-height: 0;
+      visibility: hidden;
+    } */
+
+    
+
+  </style>
+</head>
+
+<body>
+<div> 
+  <ul class="box">
+    <li>22</li>
+    <li>22</li>
+    <li>22</li>
+    <li>222</li>
+  </ul>
+</div>
+
+</body>
+<script src="./node_modules/jQuery/tmp/jquery.js"></script>
+<script>
+  // var stroge = "1、4、3、2、6、5"
+  // var key = stroge.split("、")
+  // for (let i = 0; i < key.length - 1; i++) {
+  //   for (let j = 0; j < key.length - i; j++) {
+  //     if (key[j] < key[j + 1]) {
+  //       [key[j], key[j + 1]] = [key[j + 1], key[j]]
+  //     }
+  //   }
+  // }
+  // console.log(key);
+  // console.log(key.join(','));
+  // if ("a">"1") {
+  //   console.log("a");
+  //   console.log(1); 
+  // }
+
+  // var a = 1
+  // function test() {
+  //   //定时器1
+  //   setTimeout(() => {
+  //     alert(a)
+  //     a = 3
+  //   }, 100);
+  //   a = 2
+  //   //定时器2
+  //   setTimeout(() => {
+  //     alert(a)
+  //     a = 4
+  //   }, 300);
+  // }
+  // test()
+  // alert(0)
+
+  // var say = function () {
+  //   var i = 1;
+  //   var sayName = function () {
+  //     i++;
+  //     alert(i);
+  //   }
+  //   return sayName;
+  // }
+  // var result1 = say();
+  // result1(); //1
+  // result1(); //2
+
+  // var fn = function () {
+// 把数组中相同的    
+  // var arr = [3, 4, 5, 7, 8, 9, 9, 3, 4, 4]
+
+  // function arr1(arr) {
+  //   let arrser = []
+  //   arr.forEach((item, index) => {
+  //     if (arrser.indexOf(item) == -1) {
+  //       arrser.push(item)
+  //     }
+  //   })
+  //   return arrser
+  // }
+  // var arrser = new Array(1,2,3,4) 
+  // var obj = new Object()
+  // console.log(arrser,obj);
+  
+  // console.log(arr1(arr));
+ 
+  // (function ($) {
+  //   jQuery.extend({
+  //     min:function(obj){   
+
+  //       if (!obj) {
+  //         return '都没了'
+  //       }
+  //       var a = obj["a"]||"a没了"
+  //       var b = obj["b"]||"b没了"
+  //       return obj?a+b:'都没了'
+  //     }
+  //   });
+  // })(jQuery)
+  // console.log($.min())
+  // var box = document.getElementsByClassName('box');
+  var box = $('.box')
+  var lis = box.children();  
+  console.log(lis);
+  [].forEach.call(lis,(item,index)=>{
+    item.onclick = indexSj
+  })
+  function indexSj() {
+    alert(1)
+  }
+
+  
+</script>
+
+</html>

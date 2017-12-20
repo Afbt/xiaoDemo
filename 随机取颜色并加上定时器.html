@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  #abc{
+    width: 200px;
+    height: 200px;
+    /* background-color:red;  */
+  }
+  </style>
+</head>
+<body>
+  <div id="abc">
+    
+  </div>
+</body>
+</html>
+<script>
+  window.onload = function () {
+    
+    
+    function r() {
+      return Math.floor(Math.random()*255);
+    }
+    function g() {
+      return Math.floor(Math.random()*255);
+    }
+    function b() {
+      return Math.floor(Math.random()*255); 
+    }
+    var timer = setInterval(function () {
+      document.getElementById('abc').style.backgroundColor = `rgb(${r()},${g()},${b()})`
+      // "rgb("+r()+","+  g()+","+b()+")"
+    },15000)  
+    setTimeout(() => {
+      clearInterval(timer)
+    }, 300000);
+  }
+</script>
