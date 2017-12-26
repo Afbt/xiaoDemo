@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="body">
+
+  </div>
+</body>
+
+</html>
+<script>
+  let str = ['名字','年龄','身高','三围']
+  //单元格
+  function tds(x = 3) {
+    let td = ``
+    for (let i = 0; i < x; i++) {
+      td += `<td>${str[i]}</td>`
+    }
+    return td
+  }
+  //标头 
+  function ths(x = 3) {
+    let th = ``
+    for (let i = 0; i < x; i++) {
+      th += `<th>${str[i]}</th>`
+    }
+    return th
+  }
+  //表格行
+  function name(ht) {
+    let tr = `<tr>${ht}</tr>`
+    return tr
+  }
+  let table = `<table border=1>${name(ths(str.length))}${name(tds(str.length))}${name(tds(str.length))}</table>`
+  document.getElementById('body').innerHTML = table
+</script>

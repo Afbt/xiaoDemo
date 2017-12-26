@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  // var a = 10,b = 2;
+  // // 普通的交换数值 总感觉是否太low
+  // var c;
+  // c = a;
+  // a = b;
+  // b = t
+  // console.log(a);
+  // console.log(b);
+
+  // // 神人想出来的    运用的是运算符优先级 先执行了b=a
+  // a = [b, b = a][0];
+  // console.log(a);
+  // // 利用了ES6的解构赋值语法
+  // [a,b] = [b,a];
+  // console.log(a);
+  // console.log(b);
+
+
+  var a = [5, 2, 3, 1, 6];
+  // 外层循环
+  for (let i = 0; i < a.length - 1; i++) {
+    // 内层循环
+    for (let j = 0; j < a.length-i; j++) {
+      // 判断
+      if (a[j] > a[j + 1]) {
+        // ES6 的交换数值
+        [a[j], a[j + 1]] = [a[j + 1], a[j]];
+      }
+    }
+
+
+  }
+  console.log(a);
+</script>
+
+</html>

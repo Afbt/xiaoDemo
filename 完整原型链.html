@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+  console.dir(Function());
+  console.dir(Function.prototype);
+
+  
+  function Fn(name = "王二", age = 12) {
+    this.name = name
+    this.age = age
+  }
+  Fn.prototype.play = function () {
+    console.log(this);
+    
+    console.log(`今天,${this.name},去面试,后面一个${this.age}的考官看来他好久`);
+    
+
+  }
+  var f = new Fn("赵三",14)
+  f.play()
+</script>
