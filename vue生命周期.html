@@ -10,31 +10,55 @@
 <body>
   <div id="app">
     <div >
-        {{msg}}
+        {{msg}}--{{math}}
     </div>
-    
+    <input type="text" v-model="math">
+    <button @click="updat">点击</button>
   </div>
 
 
 
-  <script src="./node_modules/vue/dist/vue.js"></script>
+  <script src="./node_modules/_vue@2.5.11@vue/dist/vue.js"></script>
   <script>
     new Vue({
       el:"#app",
       data:{
-        msg :"hello world"
+        msg :"hello world",
+        math:1
       },
       //vvue创建实例的时候执行
       beforeCreate(){
-        console.log("beforeCreate");
-        
+        console.log("1-beforeCreate");
       },
       created(){
-        console.log("beforeCreate");
+        console.log("2-beforeCreate");
+      },
+      beforeMount(){
+        console.log('3-beforeMount');
       },
       mounted(){
-        console.log("mounted");
-        
+        console.log("4-mounted");
+      },
+
+      beforeUpdate(){ 
+        console.log('5-beforeUpdate');
+      },
+      updated(){
+        console.log('6-updated');
+      },
+
+
+      beforeDestroy(){
+        console.log('7-beforeDestroy');
+      },
+      destroyed(){
+        console.log('8-destroyed');
+      },
+
+      methods:{
+        updat(){
+          this.math =  ++this.math
+        }
       }
     })
   </script>

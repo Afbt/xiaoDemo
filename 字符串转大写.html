@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    // charAt()获取字符串中某一个位置的字符只能返回一个字符
+    //substring()//substring(start(开始),end(结束)) 
+    //substr()//substr(start(开始),length(长度))
+    //toUpperCase()把字符串小写转大写
+    //slice()截取字符串中某一段 slice(start,end)
+    function capitalize(string) {
+        var words = string.split(" ");
+        console.log(words);
+        for (var i = 0; i < words.length; i++) {
+            words[i] = words[i].substring(0,1).toUpperCase() + words[i].slice(1);
+        }
+        console.log(words);
+        return words.join(" ");
+    }
+    var string = "I believe I am the best";
+    console.log(capitalize(string));
+</script>

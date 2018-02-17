@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+   <style>
+    /* div{
+      border: 1px solid #000;
+    } */
+    *{
+      margin: 0;
+      padding:0;
+    }
+  </style> 
+</head>
+<body>
+    <span id="sp">
+12
+    </span>
+</body>
+</html>
+<script src="./node_modules/_jquery@3.2.1@jquery/dist/jquery.js"></script>
+<script>
+  //jsc创建元素的方法
+  // let jsdv =document.createElement('div') //创建元素
+  // let body = document.querySelector('body')
+  // jsdv.innerHTML = "妹子"
+  // body.appendChild(jsdv) 父.appendChild(子) 插入元素
+
+  //jq创建元素的方法
+
+  // let border =`style='border: 1px solid #000'` //样式要用''单引号引起来
+  // let jqdv =$(`<span ${border}>大妹子</span>`) //创建元素
+ 
+  // $('body').append(jqdv) // $(父).append(子) 插入元素
+
+  // jq把元素插入兄弟元素前面的方法
+  let border = `style='border:1px solid #000'` //样式要用''单引号起来
+  let jqdv = $(`<span id='sp' ${border}>大妹子</span>`)  //创建元素
+    $('body').prepend(jqdv) //$(父).prepend(子)  在这个父级元素下插入一个子级元素，并且是该元素下面的所有子级元素的第一个
+  // $('body').append(jqdv) //$(父).append(子)   在这个父级元素下插入一个子级元素，并且是该元素下面的所有子级元素的最后一个
+  // setTimeout(() => {
+  //   console.log(1);
+    
+    // $('#sp').before(jqdv) //插入在同级元素的前面
+    $('#sp').after(jqdv) //插入在同级元素的前面
+  // }, 1000);
+  
+  // appendChild //查入在所有同级元素的后面(最后)
+  // prependChild //查入在所有同级元素的前面(第一个)
+  // insertBefore //插入在同级元素的前面
+  // insertAfter //插入在同级元素的前面
+  
+</script>
